@@ -8,7 +8,6 @@ namespace lab4_Factory.PizzaStoreCatalog
     internal class BenderPizzaStore : PizzaStore
     {
 
-
         protected override Pizza CreatePizza(int number)
         {
             Pizza pizza;
@@ -29,7 +28,6 @@ namespace lab4_Factory.PizzaStoreCatalog
                     break;
                 default: throw new ArgumentOutOfRangeException(nameof(number), number, "Пиццы с таким номером нет");
             }
-
             return pizza;
         }
     }

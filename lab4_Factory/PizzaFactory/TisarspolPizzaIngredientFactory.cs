@@ -10,10 +10,11 @@ namespace lab4_Factory.PizzaFactory
     {
 
 
-        public override IDough CreateDough() 
+        public override IDough CreateDough()
         {
-             return new ThickCrustDough();
+            return new ThickCrustDough();
         }
+
         public override void CreateSause() { }
         public override void CreateCheese() { }
         public override void CreateVeggies() { }
