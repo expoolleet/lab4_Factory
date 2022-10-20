@@ -1,11 +1,11 @@
-﻿using System;
+﻿using lab4_Factory.Pizzas;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using lab4_Factory.Pizzas;
 
 namespace lab4_Factory.PizzaStoreCatalog
 {
-    class TiraspolPizzaStore : PizzaStore
+    internal class BenderPizzaStore : PizzaStore
     {
         Pizza pizza;
 
@@ -17,19 +17,19 @@ namespace lab4_Factory.PizzaStoreCatalog
             switch (number)
             {
                 case 1:
-                    pizza = new TiraspolCheesePizza();
+                    pizza = new BenderCheesePizza();
                     break;
                 case 2:
-                    pizza = new TiraspolPepperoniPizza();
+                    pizza = new BenderPepperoniPizza();
                     break;
                 case 3:
-                    pizza = new TiraspolClamPizza();
+                    pizza = new BenderClamPizza();
                     break;
                 case 4:
-                    pizza = new TiraspolVeggiePizza();
+                    pizza = new BenderVeggiePizza();
                     break;
             }
-           
+
             pizza.Prepare();
             pizza.Bake();
             pizza.Cut();

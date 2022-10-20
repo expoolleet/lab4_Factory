@@ -6,6 +6,6 @@ namespace lab4_Factory.Interfaces
 {
     interface IDough
     {
-        string Name { get; set; }
+        string Type { get; }
     }
 }

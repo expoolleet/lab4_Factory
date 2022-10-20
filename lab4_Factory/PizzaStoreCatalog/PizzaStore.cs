@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using lab4_Factory.Pizzas;
 
 namespace lab4_Factory
 {
     abstract class PizzaStore
     {
-        public abstract void CreatePizza();
+        public abstract Pizza CreatePizza();
     }
 }
