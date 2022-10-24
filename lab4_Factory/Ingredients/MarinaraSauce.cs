@@ -5,10 +5,9 @@ using System.Text;
 
 namespace lab4_Factory.Ingredients
 {
-    internal class ThickCrustDough : IDough
+    internal class MarinaraSauce : ISauce
     {
-        string type = "Тесто с толстой коркой\n";
-
+        string type = "Соус маринара\n";
         public string Type { get { return type; } }
     }
 }

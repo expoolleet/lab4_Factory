@@ -7,6 +7,7 @@ namespace lab4_Factory.Pizzas
 {
     class Pizza
     {
+        public string about = "\nВ пицце содержится:\n";
 
         protected PizzaIngredientFactory IngredientFactory { get; }
         public Pizza(PizzaIngredientFactory ingredientFactory)
@@ -24,7 +25,10 @@ namespace lab4_Factory.Pizzas
 
         public virtual void Eat() => Console.WriteLine("Пицца съедена");
 
-        public virtual void Info() { }
+        public void About()
+        {
+            Console.WriteLine(about);
+        }
 
     }
 }

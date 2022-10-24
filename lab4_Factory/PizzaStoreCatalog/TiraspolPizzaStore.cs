@@ -20,13 +20,13 @@ namespace lab4_Factory.PizzaStoreCatalog
                     pizza = new TiraspolCheesePizza(ingredientFactory);
                     break;
                 case 2:
-                    pizza = new TiraspolPepperoniPizza();
+                    pizza = new TiraspolPepperoniPizza(ingredientFactory);
                     break;
                 case 3:
-                    pizza = new TiraspolClamPizza();
+                    pizza = new TiraspolClamPizza(ingredientFactory);
                     break;
                 case 4:
-                    pizza = new TiraspolVeggiePizza();
+                    pizza = new TiraspolVeggiePizza(ingredientFactory);
                     break;
                 default: throw new ArgumentOutOfRangeException(nameof(number), number, "Пиццы с таким номером нет");
 

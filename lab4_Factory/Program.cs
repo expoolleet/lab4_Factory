@@ -29,7 +29,7 @@ namespace lab4_Factory
             try
             {
                 Pizza pizza = store.OrderPizza(number);
-                pizza.Info();
+                pizza.About();
                 pizza.Eat();
             }
             catch(Exception ex) { Console.WriteLine(ex.Message); }

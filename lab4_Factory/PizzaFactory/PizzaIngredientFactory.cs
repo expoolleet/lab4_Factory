@@ -8,11 +8,11 @@ namespace lab4_Factory.PizzaFactory
     abstract class PizzaIngredientFactory
     {
         abstract public IDough CreateDough();
-        abstract public void CreateSause();
-        abstract public void CreateCheese();
-        abstract public void CreateVeggies();
-        abstract public void CreatePepperoni();
-        abstract public void CreateClam();
+        abstract public ISauce CreateSause();
+        abstract public ICheese CreateCheese();
+        abstract public IVeggie CreateVeggies();
+        abstract public IPepperoni CreatePepperoni();
+        abstract public IClams CreateClams();
 
     }
 }

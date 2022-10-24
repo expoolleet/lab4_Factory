@@ -6,23 +6,23 @@ using System.Text;
 
 namespace lab4_Factory.PizzaFactory
 {
-    class TisarspolPizzaIngredientFactory : PizzaIngredientFactory
+    internal class BenderPizzaIngredientFactory : PizzaIngredientFactory
     {
         public override IDough CreateDough()
         {
-            return new ThickCrustDough();
+            return new ThinCrustDough();
         }
         public override ISauce CreateSause()
         {
-            return new PlumTomatoSauce();
+            return new MarinaraSauce();
         }
         public override ICheese CreateCheese()
         {
-            return new MozzarellaCheese();
+            return new ReggianoCheese();
         }
         public override IVeggie CreateVeggies()
         {
-            return new BellPepperVeggie();
+            return new EggplantVeggie();
         }
         public override IPepperoni CreatePepperoni()
         {
@@ -30,7 +30,7 @@ namespace lab4_Factory.PizzaFactory
         }
         public override IClams CreateClams()
         {
-            return new FrozenClams();
+            return new FreshClams();
         }
     }
 }
