@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using lab4_Factory.Pizzas;
+using lab4_Factory.PizzaStoreCatalog;
 
 namespace lab4_Factory
 {
     abstract class PizzaStore
     {
-
-        protected abstract Pizza CreatePizza(int number);
-        public Pizza OrderPizza(int number)
+        protected abstract Pizza CreatePizza(PizzaEnumType pizzaType);
+        public Pizza OrderPizza(PizzaEnumType pizzaType)
         {
-            var pizza = CreatePizza(number);
+            var pizza = CreatePizza(pizzaType);
 
             pizza.Prepare();
             pizza.Bake();

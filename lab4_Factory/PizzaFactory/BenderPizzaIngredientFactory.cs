@@ -1,8 +1,5 @@
 ﻿using lab4_Factory.Ingredients;
 using lab4_Factory.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace lab4_Factory.PizzaFactory
 {

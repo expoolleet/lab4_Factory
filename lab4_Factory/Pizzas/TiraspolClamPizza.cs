@@ -1,7 +1,5 @@
-﻿using lab4_Factory.PizzaFactory;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using lab4_Factory.PizzaFactory;
 
 namespace lab4_Factory.Pizzas
 {
@@ -11,9 +9,9 @@ namespace lab4_Factory.Pizzas
 
         public override void Prepare()
         {
-            about += IngredientFactory.CreateDough().Type;
-            about += IngredientFactory.CreateSause().Type;
-            about += IngredientFactory.CreateClams().Type;
+            Info += IngredientFactory.CreateDough().Type;
+            Info += IngredientFactory.CreateSause().Type;
+            Info += IngredientFactory.CreateClams().Type;
         }
 
         public override void Eat() => Console.WriteLine("Пицца «Креветка» съедена");

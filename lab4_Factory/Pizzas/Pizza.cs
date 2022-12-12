@@ -1,21 +1,20 @@
-﻿using lab4_Factory.PizzaFactory;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using lab4_Factory.PizzaFactory;
 
 namespace lab4_Factory.Pizzas
 {
-    class Pizza
+    abstract class Pizza
     {
-        public string about = "\nВ пицце содержится:\n";
+        public string Info { get; protected set; } = "\nВ пицце содержится:\n";
 
         protected PizzaIngredientFactory IngredientFactory { get; }
+
         public Pizza(PizzaIngredientFactory ingredientFactory)
         {
             IngredientFactory = ingredientFactory;
         }
 
-        public virtual void Prepare() => Console.WriteLine("Пицца приготовлена");
+        abstract public void Prepare();
 
         public void Bake() => Console.WriteLine("Пицца запечена");
 
@@ -23,12 +22,20 @@ namespace lab4_Factory.Pizzas
 
         public void Box() => Console.WriteLine("Пицца упакована");
 
-        public virtual void Eat() => Console.WriteLine("Пицца съедена");
+        abstract public void Eat();
 
         public void About()
         {
-            Console.WriteLine(about);
+            Console.WriteLine(Info);
         }
+    }
 
+    public enum PizzaEnumType
+    {
+        Unknown,
+        CheesePizza,
+        PepperoniPizza,
+        ClamPizza,
+        VeggiePizza
     }
 }

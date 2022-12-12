@@ -1,36 +1,33 @@
-﻿using lab4_Factory.PizzaFactory;
+﻿using System;
+using lab4_Factory.PizzaFactory;
 using lab4_Factory.Pizzas;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace lab4_Factory.PizzaStoreCatalog
 {
     internal class BenderPizzaStore : PizzaStore
     {
-
-        protected override Pizza CreatePizza(int number)
+        protected override Pizza CreatePizza(PizzaEnumType pizzaType)
         {
             Pizza pizza;
             BenderPizzaIngredientFactory ingredientFactory = new BenderPizzaIngredientFactory();
 
-            switch (number)
+            switch (pizzaType)
             {
-                case 1:
+                case PizzaEnumType.CheesePizza:
                     pizza = new BenderCheesePizza(ingredientFactory);
                     break;
-                case 2:
+                case PizzaEnumType.PepperoniPizza:
                     pizza = new BenderPepperoniPizza(ingredientFactory);
                     break;
-                case 3:
+                case PizzaEnumType.ClamPizza:
                     pizza = new BenderClamPizza(ingredientFactory);
                     break;
-                case 4:
+                case PizzaEnumType.VeggiePizza:
                     pizza = new BenderVeggiePizza(ingredientFactory);
                     break;
-                default: throw new ArgumentOutOfRangeException(nameof(number), number, "Пиццы с таким номером нет");
+                default: throw new ArgumentOutOfRangeException(nameof(pizzaType), pizzaType, "Пиццы с таким номером нет");
             }
             return pizza;
-        }
+        } 
     }
 }

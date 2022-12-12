@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using lab4_Factory.PizzaFactory;
 using lab4_Factory.Pizzas;
 
@@ -8,31 +6,28 @@ namespace lab4_Factory.PizzaStoreCatalog
 {
     class TiraspolPizzaStore : PizzaStore
     {
-
-
-        protected override Pizza CreatePizza(int number)
+        protected override Pizza CreatePizza(PizzaEnumType pizzaType)
         {
             Pizza pizza;
             TisarspolPizzaIngredientFactory ingredientFactory = new TisarspolPizzaIngredientFactory();
-            switch (number)
+
+            switch (pizzaType)
             {
-                case 1:
+                case PizzaEnumType.CheesePizza:
                     pizza = new TiraspolCheesePizza(ingredientFactory);
                     break;
-                case 2:
+                case PizzaEnumType.PepperoniPizza:
                     pizza = new TiraspolPepperoniPizza(ingredientFactory);
                     break;
-                case 3:
+                case PizzaEnumType.ClamPizza:
                     pizza = new TiraspolClamPizza(ingredientFactory);
                     break;
-                case 4:
+                case PizzaEnumType.VeggiePizza:
                     pizza = new TiraspolVeggiePizza(ingredientFactory);
                     break;
-                default: throw new ArgumentOutOfRangeException(nameof(number), number, "Пиццы с таким номером нет");
-
+                default: throw new ArgumentOutOfRangeException(nameof(pizzaType), pizzaType, "Пиццы с таким номером нет");
             }
             return pizza;
-
         }
     }
 }
